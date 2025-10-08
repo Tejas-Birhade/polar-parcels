@@ -1,0 +1,7 @@
+﻿{
+  "vehicles": [
+    { "id": "v-rav4",  "type": "car",        "capacityKg": 300, "winterTires": true,  "rangeKm": 450 },
+    { "id": "v-sno1",  "type": "snowmobile", "capacityKg": 80,  "winterTires": false, "rangeKm": 120 },
+    { "id": "v-bike1", "type": "cargo-bike", "capacityKg": 40,  "studs": true,        "rangeKm": 35  }
+  ]
+}

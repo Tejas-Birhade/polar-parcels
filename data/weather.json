@@ -1,0 +1,7 @@
+﻿{
+  "region": "Thunder Bay",
+  "conditions": "snow",
+  "tempC": -12,
+  "windKph": 22,
+  "alerts": ["lake-effect-snow"]
+}

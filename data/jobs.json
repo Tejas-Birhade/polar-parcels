@@ -1,0 +1,7 @@
+﻿{
+  "date": "2025-10-15",
+  "jobs": [
+    { "id": "J-1001", "from": "P7A 0A1", "to": "P7B 2G8", "distanceKm": 12.5, "kg": 12, "priority": "standard", "terrain": "urban" },
+    { "id": "J-1002", "from": "P7C 1X2", "to": "P0T 1W0", "distanceKm": 85.0, "kg": 6,  "priority": "express",  "terrain": "backcountry" }
+  ]
+}

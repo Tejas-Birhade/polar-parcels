@@ -1,0 +1,11 @@
+{
+  "assignments": [
+    {
+      "jobId": "J-1001",
+      "driverId": "d-sam",
+      "vehicleId": "v-bike1",
+      "etaMinutes": 42,
+      "price": 11.14
+    }
+  ]
+}

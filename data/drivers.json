@@ -1,0 +1,6 @@
+﻿{
+  "drivers": [
+    { "id": "d-alex", "name": "Alex", "licenses": ["car","snowmobile"], "homeBase": "Thunder Bay" },
+    { "id": "d-sam",  "name": "Sam",  "licenses": ["cargo-bike"],      "homeBase": "Waterloo" }
+  ]
+}
